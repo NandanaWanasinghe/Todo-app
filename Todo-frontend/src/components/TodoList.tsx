@@ -43,7 +43,7 @@ const TodoList:React.FC = () =>{
     const [updateaTitle,setUpdateTitle]=useState('');
     const [updateDescription,setUpdateDescription]=useState('');
 
-    const updateCustomer= async ()=>{
+    const updateTodo= async ()=>{
         try{
 
             await axios.put('http://localhost:3000/api/v1/todos/update/'+selectedTodoId,{
@@ -134,7 +134,7 @@ const TodoList:React.FC = () =>{
         <Modal show={modalState}>
 
             <div className='p-4'>
-                <h2>Update Customer</h2>
+                <h2>Update Todo</h2>
                 <hr/>
 
                 <div className="col-12">
@@ -155,7 +155,7 @@ const TodoList:React.FC = () =>{
                 </div>
                 <div className="col-12">
                     <button type='button' className='btn-success btn col-12'
-                            onClick={()=>updateCustomer()}
+                            onClick={()=>updateTodo()}
                     >Update Customer</button>
                     <br/>
                     <br/>

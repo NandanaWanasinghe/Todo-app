@@ -70,7 +70,7 @@ const updateTodo = async (req, resp) => {
 }
 const findById = async (req, resp) => {
   try {
-    const todoId = req.params.id; // Assuming the ID is passed as a route parameter
+    const todoId = req.params.id;
 
     const todo = await TodoModel.findByPk(todoId);
 

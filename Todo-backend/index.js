@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const app = express();
 
-// Middleware
+
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -16,7 +16,6 @@ const TodoRouter = require('./routes/TodoRoute');
 
 const db = require('./models');
 
-// Start the server
 const port = process.env.PORT || 3000;
 
 db.sequelize
